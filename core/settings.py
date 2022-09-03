@@ -77,7 +77,7 @@ DATABASES = {
         'NAME': env.str('MONGO_DB'),
         'ENFORCE_SCHEMA': False,
         'CLIENT': {
-                'host': env.str('ATLAS_STRING'),
+                'host': env.str('ATLAS_STRING_ED'),
         }
     }
 }
@@ -118,7 +118,9 @@ MITDB_HOST = env.str('MITDB_HOST', default='')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+MEDIA_ROOT = BASE_DIR/'ECG_graficas'
+MEDIA_URL = '/ECG_graficas/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
